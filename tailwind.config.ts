@@ -6,11 +6,23 @@ export default {
   theme: {
     extend: {
       borderRadius: {
-        lg: ".5625rem", /* 9px */
-        md: ".375rem", /* 6px */
-        sm: ".1875rem", /* 3px */
+        lg: ".75rem", /* 12px */
+        md: ".5rem", /* 8px */
+        sm: ".25rem", /* 4px */
+        xl: "1rem", /* 16px */
+        "2xl": "1.5rem", /* 24px */
+        "3xl": "2rem", /* 32px */
       },
       colors: {
+        mtn: {
+          DEFAULT: "hsl(var(--mtn-yellow) / <alpha-value>)",
+        },
+        airtel: {
+          DEFAULT: "hsl(var(--airtel-red) / <alpha-value>)",
+        },
+        glo: {
+          DEFAULT: "hsl(var(--glo-green) / <alpha-value>)",
+        },
         // Flat / base colors (regular buttons)
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
