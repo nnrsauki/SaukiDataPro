@@ -143,11 +143,9 @@ export function useAuth() {
 }
 
 export function useCurrentOrder() {
-  const [order, setOrder] = useState<store.CurrentOrder | null>(null);
-
-  useEffect(() => {
-    setOrder(store.getCurrentOrder());
-  }, []);
+  const [order, setOrder] = useState<store.CurrentOrder | null>(() => {
+    return store.getCurrentOrder();
+  });
 
   const setCurrentOrder = useCallback((newOrder: store.CurrentOrder) => {
     store.setCurrentOrder(newOrder);
